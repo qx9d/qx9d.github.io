@@ -12,6 +12,7 @@ body {
 .clipboard {
   position: relative;
 }
+
 /* You just need to get this field */
 .copy-input {
   max-width: 275px;
@@ -66,27 +67,6 @@ body {
   transition: .4s opacity;
 }
 /* You just need to get this field */
-
-.footer {
-  position:fixed;
-  bottom:5px;
-}
-
-.footer p {
-  font-family: 'Montserrat', sans-serif;
-  font-size:12px;
-  color:#000;
-}
-
-.footer a {
-  color: #efefef;
-  transition: all .4s;
-}
-
-.footer a:hover {
-  color: #eaeaeb;
-}
-
 
 .site-header {
     display: flex;
