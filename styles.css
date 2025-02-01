@@ -10,16 +10,41 @@ body {
     color: #343a40;
 }
 
-header {
-    background-color: #007BFF;
+.site-header {
+    display: flex;
+    align-items: center;
+    background-color: #333333; /* Цвет фона шапки */
     color: white;
-    padding: 20px;
-    text-align: center;
+    padding: 10px;
 }
 
-h1 {
+.header-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px; /* Максимальная ширина шапки */
+    margin: 0 auto; /* Центрирование */
+}
+
+.header-text {
+    flex: 1; /* Занимает доступное пространство */
+    padding-right: 20px; /* Отступ между текстом и изображением */
+}
+
+.header-text h1 {
+    font-size: 2.0em; /* Размер заголовка */
     margin: 0;
-    font-size: 2.5em;
+}
+
+.header-text p {
+    font-size: 1.0em; /* Размер подзаголовка */
+    margin-top: 10px; /* Отступ сверху */
+}
+
+.header-image {
+    width: 300px; /* Ширина изображения */
+    height: auto; /* Автоматическая высота */
+    border-radius: 10px; /* Закругленные углы изображения */
 }
 
 .container {
