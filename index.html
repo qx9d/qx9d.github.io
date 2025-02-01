@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Плагины</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/d97b87339f.js" crossorigin="anonymous"></script>
 </head>
 <body>
  <header class="site-header">
@@ -23,7 +24,10 @@
         <h2 class="plugin-title">TMDB Proxy</h2>
         <p class="plugin-description">Проксирование постеров для сайта TMDB</p>
         <p class="plugin-description">https://ipdown.ru/tmdb.js</p>
-        <button class="copy-button" onclick="copyToClipboard('https://ipdown.ru/tmdb.js')">Скопировать ссылку</button>
+        <div class="clipboard">
+<input onclick="copy()" class="copy-input" value="https://www.bugra.work" id="copyClipboard" readonly>
+<button class="copy-btn" id="copyButton" onclick="copy()"><i class="far fa-copy"></i></button>
+</div>
     </div>
 </div>
 <div class="plugin-card">
