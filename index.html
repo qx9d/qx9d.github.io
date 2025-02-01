@@ -14,9 +14,10 @@
 <div class="plugin-card">
     <img src="https://via.placeholder.com/300" alt="Плагин 1" class="plugin-image">
     <div class="plugin-info">
-        <h2 class="plugin-title">Плагин 1</h2>
-        <p class="plugin-description">Краткое описание плагина 1. Этот плагин помогает вам делать что-то полезное.</p>
-        <button class="copy-button" onclick="copyToClipboard('https://example.com/plugin1')">Скопировать ссылку</button>
+        <h2 class="plugin-title">TMDB Proxy</h2>
+        <p class="plugin-description">Проксирование постеров для сайта TMDB</p>
+        <p class="plugin-description">https://ipdown.ru/tmdb.js</p>
+        <button class="copy-button" onclick="copyToClipboard('https://ipdown.ru/tmdb.js')">Скопировать ссылку</button>
     </div>
 </div>
 <div class="plugin-card">
@@ -38,7 +39,6 @@
     <script>
         function copyToClipboard(text) {
             navigator.clipboard.writeText(text).then(() => {
-                alert('Ссылка скопирована в буфер обмена!');
             }).catch(err => {
                 console.error('Ошибка при копировании: ', err);
             });
