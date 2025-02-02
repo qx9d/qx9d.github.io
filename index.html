@@ -44,10 +44,10 @@
         <!-- Добавьте больше карточек плагинов по аналогии -->
     </main>
     <footer>
-        <p>&copy; 2025 Все права защищены</p>
+        <p>&copy; 2025 Все права не защищены</p>
     </footer>
 
-	<script>
+<script>
     document.addEventListener('DOMContentLoaded', function() {
         const clipboard = new ClipboardJS('.copy-btn', {
             target: function(trigger) {
@@ -58,15 +58,23 @@
         clipboard.on('success', function(e) {
             console.log('Текст скопирован: ' + e.text);
             
-            // Изменяем цвет фона кнопки после успешного копирования
+            // Изменяем цвет фона кнопки
             const button = e.trigger; // Получаем кнопку, которая была нажата
-            button.style.backgroundColor = 'lightgreen'; // Меняем цвет фона на зеленый
+            button.style.backgroundColor = 'lightgreen'; // Устанавливаем новый цвет фона
 
-            // Возвращаем цвет фона через 1 секунду
+            // Восстанавливаем оригинальный цвет через секунду
             setTimeout(() => {
                 button.style.backgroundColor = ''; // Сбрасываем цвет фона
             }, 1000);
 
+            const copySuccess = document.createElement('div');
+            copySuccess.innerText = 'Скопировано!';
+            copySuccess.style.opacity = '1';
+            document.body.appendChild(copySuccess);
+            setTimeout(() => {
+                copySuccess.style.opacity = '0';
+                setTimeout(() => copySuccess.remove(), 500);
+            }, 1000);
             e.clearSelection();
         });
 
