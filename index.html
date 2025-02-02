@@ -57,6 +57,13 @@
             color: #ccc;
             white-space: nowrap; /* Запрет на перенос текста */
         }
+	.tag-secc {
+    background-color: #4CAF50;
+    padding: 8px 12px;
+    border-radius: 5px;
+    color: #ffffff;
+    white-space: nowrap;
+}
     </style>
     <script>
         function toggleLinks() {
@@ -164,9 +171,9 @@
 });
  
 clipboard.on('success', function(e){
-	e.trigger.classList.add('btn-success');
+	e.trigger.classList.add('tag-secc');
 	setTimeout(function(){
-		e.trigger.classList.remove('btn-success');
+		e.trigger.classList.remove('tag-secc');
 	}, 3000);
 });
  
