@@ -60,7 +60,7 @@
             
             // Изменяем цвет фона кнопки
             const button = e.trigger; // Получаем кнопку, которая была нажата
-            button.style.backgroundColor = 'lightgreen'; // Устанавливаем новый цвет фона
+            button.style.backgroundColor = '#46d315'; // Устанавливаем новый цвет фона
 
             // Восстанавливаем оригинальный цвет через секунду
             setTimeout(() => {
@@ -68,7 +68,6 @@
             }, 1000);
 
             const copySuccess = document.createElement('div');
-            copySuccess.innerText = 'Скопировано!';
             copySuccess.style.opacity = '1';
             document.body.appendChild(copySuccess);
             setTimeout(() => {
