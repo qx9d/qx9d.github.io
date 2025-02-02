@@ -48,22 +48,32 @@
     </footer>
 
 <script>
-var clipboard = new ClipboardJS('#copyButton', {
-	text: function(trigger) {
-		return document.getElementById('input').value;
-	}
-});
+	<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const clipboard = new ClipboardJS('.copy-btn', {
+            target: function(trigger) {
+                return trigger.previousElementSibling; // Получаем предыдущий элемент (input)
+            }
+        });
 
-clipboard.on('success', function(e){
-	e.trigger.classList.add('copy-btn');
-	setTimeout(function(){
-		e.trigger.classList.remove('copy-btn);
-	}, 3000);
-});
+        clipboard.on('success', function(e) {
+            console.log('Текст скопирован: ' + e.text);
+            const copySuccess = document.createElement('div');
+            copySuccess.innerText = 'Скопировано!';
+            copySuccess.style.opacity = '1';
+            document.body.appendChild(copySuccess);
+            setTimeout(() => {
+                copySuccess.style.opacity = '0';
+                setTimeout(() => copySuccess.remove(), 500);
+            }, 1000);
+            e.clearSelection();
+        });
 
-clipboard.on('error', function(e){
-	alert('Ошибка копирования');
-});
+        clipboard.on('error', function(e) {
+            console.error('Ошибка копирования: ', e);
+        });
+    });
+</script>
 </script>
 
 </body>
