@@ -8,7 +8,7 @@
     <script src="https://kit.fontawesome.com/d97b87339f.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
 <style>
-      body {
+       body {
             font-family: 'Arial', sans-serif;
             background-color: #f4f4f4;
             margin: 0;
@@ -17,15 +17,28 @@
         }
 
         header {
-            background-color: #007BFF;
+            background-color: #212529; /* Темный фон */
             color: white;
             padding: 20px;
-            text-align: center;
+            display: flex;
+            align-items: center; /* Выравнивание по центру по вертикали */
+        }
+
+        img.logo {
+            width: 80px; /* Ограничение размера логотипа */
+            height: auto;
+            margin-right: 15px; /* Отступ между логотипом и заголовком */
         }
 
         h1 {
             margin: 0;
-            font-size: 2.5em;
+            font-size: 2em; /* Уменьшенный размер заголовка */
+        }
+
+        h2 {
+            margin: 5px 0 0; /* Уменьшенный отступ для подзаголовка */
+            font-size: 1.2em; /* Уменьшенный размер подзаголовка */
+            color: #b0b0b0; /* Светло-серый цвет для подзаголовка */
         }
 
         .toggle-button {
@@ -46,7 +59,7 @@
         .alternative-links {
             display: none; /* Скрываем блок по умолчанию */
             margin-top: 15px;
-            background-color: #212529; /* Темный фон */
+            background-color: #343a40; /* Темный фон */
             color: #ffffff; /* Белый текст */
             padding: 15px;
             border-radius: 5px;
@@ -60,7 +73,7 @@
         }
 
         .alternative-links .link-card {
-            background-color: #343a40; /* Темный фон для карточек */
+            background-color: #495057; /* Темный фон для карточек */
             padding: 10px;
             border-radius: 5px;
             margin: 10px 0;
@@ -68,7 +81,7 @@
         }
 
         .alternative-links .link-card:hover {
-            background-color: #495057; /* Цвет карточки при наведении */
+            background-color: #6c757d; /* Цвет карточки при наведении */
         }
 
         .alternative-links a {
@@ -80,6 +93,20 @@
         .alternative-links a:hover {
             color: #66b3ff; /* Цвет ссылок при наведении */
             text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.8em; /* Уменьшение размера заголовка на мобильных устройствах */
+            }
+
+            h2 {
+                font-size: 1em; /* Уменьшение размера подзаголовка на мобильных устройствах */
+            }
+
+            .toggle-button {
+                font-size: 0.9em; /* Уменьшение размера кнопки на мобильных устройствах */
+            }
         }
     </style>
     <script>
@@ -93,6 +120,7 @@
  <header class="site-header">
         <div class="header-content">
             <div class="header-text">
+                <img class="logo" src="https://ipdown.ru/Theme/img/lampa_js.png" alt="Lampa Logo">
                 <h1>Расширения "Lampa"</h1>
                 <p>Здесь вы найдете множество интересного и полезного.</p>
                  <button class="toggle-button" onclick="toggleLinks()">Показать альтернативные адреса</button>
