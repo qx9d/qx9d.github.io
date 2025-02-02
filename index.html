@@ -57,14 +57,16 @@
 
         clipboard.on('success', function(e) {
             console.log('Текст скопирован: ' + e.text);
-            const copySuccess = document.createElement('div');
-            copySuccess.innerText = 'Скопировано!';
-            copySuccess.style.opacity = '1';
-            document.body.appendChild(copySuccess);
+            
+            // Изменяем цвет фона кнопки после успешного копирования
+            const button = e.trigger; // Получаем кнопку, которая была нажата
+            button.style.backgroundColor = 'lightgreen'; // Меняем цвет фона на зеленый
+
+            // Возвращаем цвет фона через 1 секунду
             setTimeout(() => {
-                copySuccess.style.opacity = '0';
-                setTimeout(() => copySuccess.remove(), 500);
+                button.style.backgroundColor = ''; // Сбрасываем цвет фона
             }, 1000);
+
             e.clearSelection();
         });
 
