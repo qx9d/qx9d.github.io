@@ -48,17 +48,16 @@
     </footer>
 
 <script>
-var clipboard = new ClipboardJS('#button-copy', {
+var clipboard = new ClipboardJS('#copyButton', {
 	text: function(trigger) {
 		return document.getElementById('input').value;
 	}
 });
 
 clipboard.on('success', function(e){
-	alert('Текст скопирован: ' + e.text);
-	e.trigger.classList.add('copy-btn');
+	e.trigger.classList.add('copy-sec');
 	setTimeout(function(){
-		e.trigger.classList.remove('copy-btn');
+		e.trigger.classList.remove('copy-sec);
 	}, 3000);
 });
 
