@@ -1,0 +1,172 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e9ecef;
+    margin: 0;
+    padding: 0;
+    color: #343a40;
+}
+.clipboard {
+  position: relative;
+}
+
+/* You just need to get this field */
+.copy-input {
+  max-width: 275px;
+  width: 100%;
+  cursor: pointer;
+  background-color: #eaeaeb;
+  border:none;
+  color:#6c6c6c;
+  font-size: 14px;
+  border-radius: 5px;
+  padding: 15px 45px 15px 15px;
+  font-family: 'Montserrat', sans-serif;
+}
+.copy-input:focus {
+  outline:none;
+}
+
+.copy-btn {
+  width:40px;
+  background-color: #eaeaeb;
+  font-size: 18px;
+  padding: 6px 9px;
+  border-radius: 5px;
+  border:none;
+  color:#6c6c6c;
+  margin-left:-50px;
+  transition: all .4s;
+}
+.copy-btn:hover {
+  transform: scale(1.3);
+  color:#1a1a1a;
+  cursor:pointer;
+}
+
+.copy-btn:focus {
+  outline:none;
+}
+
+.copied {
+  font-family: 'Montserrat', sans-serif;
+  width: 100px;
+  opacity:0;
+  position:fixed;
+	bottom: 20px;
+	left: 0;
+	right: 0;
+	margin: auto;
+  color:#000;
+  padding: 15px 15px;
+  background-color: #fff;
+  border-radius: 5px;
+  transition: .4s opacity;
+}
+/* You just need to get this field */
+
+.site-header {
+    display: flex;
+    align-items: center;
+    background-color: #333333; /* Цвет фона шапки */
+    color: white;
+    padding: 10px;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px; /* Максимальная ширина шапки */
+    margin: 0 auto; /* Центрирование */
+}
+
+.header-text {
+    flex: 1; /* Занимает доступное пространство */
+    padding-right: 20px; /* Отступ между текстом и изображением */
+}
+
+.header-text h1 {
+    font-size: 2.0em; /* Размер заголовка */
+    margin: 0;
+}
+
+.header-text p {
+    font-size: 1.0em; /* Размер подзаголовка */
+    margin-top: 10px; /* Отступ сверху */
+}
+
+.header-image {
+    width: 300px; /* Ширина изображения */
+    height: auto; /* Автоматическая высота */
+    border-radius: 10px; /* Закругленные углы изображения */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.plugin-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.plugin-card:hover {
+    transform: translateY(-5px);
+}
+
+.plugin-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.plugin-info {
+    padding: 15px;
+    text-align: center;
+}
+
+.plugin-title {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.plugin-description {
+    font-size: 0.9em;
+    color: #6c757d;
+    margin: 10px 0;
+}
+
+.copy-button {
+    padding: 10px 15px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.copy-button:hover {
+    background-color: #218838;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #343a40;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
