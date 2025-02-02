@@ -73,7 +73,7 @@
             <button class="toggle-button" onclick="toggleContent()">#зеркало</button>
             <div class="hidden-content" id="hiddenContent">
                 <div class="tag-list">
-                    <div class="tag">lampa.mx</div>
+                    <button id="button-copy" type="button" data-clipboard-text="lampa.mx"><div class="tag">lampa.mx</div></button>
                     <div class="tag">lampa.stream</div>
                 </div>
             </div>
@@ -155,6 +155,23 @@
                 content.style.display = "none";
             }
         }
+     var clipboard = new ClipboardJS('#button-copy', {
+	text: function(trigger) {
+		return trigger.getAttribute('data-clipboard-text');
+	}
+});
+ 
+clipboard.on('success', function(e){
+	alert('Текст скопирован: ' + e.text);
+	e.trigger.classList.add('btn-success');
+	setTimeout(function(){
+		e.trigger.classList.remove('btn-success');
+	}, 3000);
+});
+ 
+clipboard.on('error', function(e){
+	alert('Ошибка копирования');
+});
     </script>
 
 </body>
