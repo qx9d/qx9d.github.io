@@ -6,6 +6,7 @@
     <title>Плагины</title>
     <link rel="stylesheet" href="/Theme/min.css">
     <script src="https://kit.fontawesome.com/d97b87339f.js" crossorigin="anonymous"></script>
+    <script src="/clipboard.js/dist/clipboard.min.js"></script>
 </head>
 <body>
  <header class="site-header">
@@ -24,8 +25,8 @@
                 <h2 class="plugin-title">TMDB Proxy</h2>
                 <p class="plugin-description">Проксирование постеров для сайта TMDB</p>
                 <div class="clipboard">
-                    <input onclick="copy()" class="copy-input" value="https://ipdown.ru/tmdb.js" id="copyClipboard" readonly>
-                    <button class="copy-btn" id="copyButton" onclick="copy()"><i class="far fa-copy"></i></button>
+                    <input class="copy-input" value="https://ipdown.ru/tmdb.js"  id="tmdb" readonly>
+                    <button class="copy-btn" id="copyButton" data-clipboard-target="#tmdb"><i class="far fa-copy"></i></button>
                 </div>
             </div>
         </div>
@@ -46,17 +47,25 @@
         <p>&copy; 2025 Все права защищены</p>
     </footer>
 
-    <script>
-function copy() {
-  let copyText = document.getElementById("copyClipboard");
-  let copySuccess = document.getElementById("copied-success");
-  copyText.select();
-  copyText.setSelectionRange(0, 99999); 
-  navigator.clipboard.writeText(copyText.value);
-  
- copySuccess.style.opacity = "1";
- setTimeout(function(){ copySuccess.style.opacity = "0" }, 500);
-}
-    </script>
+<script>
+var clipboard = new ClipboardJS('#button-copy', {
+	text: function(trigger) {
+		return document.getElementById('input').value;
+	}
+});
+
+clipboard.on('success', function(e){
+	alert('Текст скопирован: ' + e.text);
+	e.trigger.classList.add('btn-success');
+	setTimeout(function(){
+		e.trigger.classList.remove('btn-success');
+	}, 3000);
+});
+
+clipboard.on('error', function(e){
+	alert('Ошибка копирования');
+});
+</script>
+
 </body>
 </html>
