@@ -55,9 +55,9 @@ var clipboard = new ClipboardJS('#copyButton', {
 });
 
 clipboard.on('success', function(e){
-	e.trigger.classList.add('copy-sec');
+	e.trigger.classList.add('copy-btn');
 	setTimeout(function(){
-		e.trigger.classList.remove('copy-sec);
+		e.trigger.classList.remove('copy-btn);
 	}, 3000);
 });
 
