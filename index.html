@@ -7,6 +7,87 @@
     <link rel="stylesheet" href="/Theme/min.css">
     <script src="https://kit.fontawesome.com/d97b87339f.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
+<style>
+      body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        header {
+            background-color: #007BFF;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        .toggle-button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            font-size: 1em;
+        }
+
+        .toggle-button:hover {
+            background-color: #218838;
+        }
+
+        .alternative-links {
+            display: none; /* Скрываем блок по умолчанию */
+            margin-top: 15px;
+            background-color: #212529; /* Темный фон */
+            color: #ffffff; /* Белый текст */
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+            text-align: left; /* Выравнивание текста влево */
+        }
+
+        .alternative-links h3 {
+            margin-top: 0;
+            color: #ffffff; /* Белый текст заголовка */
+        }
+
+        .alternative-links .link-card {
+            background-color: #343a40; /* Темный фон для карточек */
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+            transition: background-color 0.3s;
+        }
+
+        .alternative-links .link-card:hover {
+            background-color: #495057; /* Цвет карточки при наведении */
+        }
+
+        .alternative-links a {
+            color: #007BFF; /* Цвет ссылок */
+            text-decoration: none;
+            display: block; /* Ссылки занимают всю ширину карточки */
+        }
+
+        .alternative-links a:hover {
+            color: #66b3ff; /* Цвет ссылок при наведении */
+            text-decoration: underline;
+        }
+    </style>
+    <script>
+        function toggleLinks() {
+            const links = document.getElementById('alternative-links');
+            links.style.display = links.style.display === 'none' || links.style.display === '' ? 'block' : 'none';
+        }
+    </script>
 </head>
 <body>
  <header class="site-header">
@@ -14,6 +95,19 @@
             <div class="header-text">
                 <h1>Расширения "Lampa"</h1>
                 <p>Здесь вы найдете множество интересного и полезного.</p>
+                 <button class="toggle-button" onclick="toggleLinks()">Показать альтернативные адреса</button>
+        <div class="alternative-links" id="alternative-links">
+            <h3>Альтернативные адреса:</h3>
+            <div class="link-card">
+                <a href="https://example.com/alternative1">https://example.com/alternative1</a>
+            </div>
+            <div class="link-card">
+                <a href="https://example.com/alternative2">https://example.com/alternative2</a>
+            </div>
+            <div class="link-card">
+                <a href="https://example.com/alternative3">https://example.com/alternative3</a>
+            </div>
+        </div>
             </div>
             <img src="/Theme/img/lampa_js.png" alt="Изображение" class="header-image" style="width:15%; height:50;"">
         </div>
