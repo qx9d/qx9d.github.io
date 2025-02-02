@@ -8,7 +8,7 @@
     <script src="https://kit.fontawesome.com/d97b87339f.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
 <style>
-            header {
+        header {
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -27,71 +27,32 @@
             margin: 0;
         }
         .toggle-button {
-            background-color: #28a745;
+            padding: 8px 12px;
+            background-color: #555;
             color: white;
             border: none;
-            padding: 10px 15px;
-            border-radius: 5px;
             cursor: pointer;
-            margin-top: 10px;
-            font-size: 1em;
-        }
-
-        .toggle-button:hover {
-            background-color: #218838;
-        }
-
-        .alternative-links {
-            display: none; /* Скрываем блок по умолчанию */
-            margin-top: 15px;
-            background-color: #343a40; /* Темный фон */
-            color: #ffffff; /* Белый текст */
-            padding: 15px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-            text-align: left; /* Выравнивание текста влево */
-        }
-
-        .alternative-links h3 {
-            margin-top: 0;
-            color: #ffffff; /* Белый текст заголовка */
-        }
-
-        .alternative-links .link-card {
-            background-color: #495057; /* Темный фон для карточек */
-            padding: 10px;
-            border-radius: 5px;
-            margin: 10px 0;
             transition: background-color 0.3s;
+            margin-bottom: 10px; /* Отступ снизу для кнопки */
         }
-
-        .alternative-links .link-card:hover {
-            background-color: #6c757d; /* Цвет карточки при наведении */
+        .toggle-button:hover {
+            background-color: #777;
         }
-
-        .alternative-links a {
-            color: #007BFF; /* Цвет ссылок */
-            text-decoration: none;
-            display: block; /* Ссылки занимают всю ширину карточки */
+        .hidden-content {
+            display: none;
+            margin-top: 10px;
         }
-
-        .alternative-links a:hover {
-            color: #66b3ff; /* Цвет ссылок при наведении */
-            text-decoration: underline;
+        .tag-list {
+            display: flex; /* Используем flex для расположения тегов в линию */
+            gap: 10px; /* Отступ между тегами */
+            margin-top: 5px; /* Отступ сверху для списка тегов */
         }
-
-        @media (max-width: 600px) {
-            h1 {
-                font-size: 1.8em; /* Уменьшение размера заголовка на мобильных устройствах */
-            }
-
-            h2 {
-                font-size: 1em; /* Уменьшение размера подзаголовка на мобильных устройствах */
-            }
-
-            .toggle-button {
-                font-size: 0.9em; /* Уменьшение размера кнопки на мобильных устройствах */
-            }
+        .tag {
+            background-color: #444;
+            padding: 8px 12px;
+            border-radius: 5px;
+            color: #ccc;
+            white-space: nowrap; /* Запрет на перенос текста */
         }
     </style>
     <script>
@@ -106,24 +67,16 @@
         <div class="text">
             <h1>Плагины "Lampa"</h1>
             <h2>Здесь вы найдете множество интересного и полезного.</h2>
+            <button class="toggle-button" onclick="toggleContent()">Показать теги</button>
+            <div class="hidden-content" id="hiddenContent">
+                <div class="tag-list">
+                    <div class="tag">lampa.mx</div>
+                    <div class="tag">lampa.stream</div>
+                </div>
+            </div>
         </div>
         <div class="logo">
             <img src="https://ipdown.ru/Theme/img/lampa_js.png" alt="Логотип Lampa">
-        </div></br>
-        <button class="toggle-button" onclick="toggleLinks()">Показать альтернативные адреса</button>
-        <div class="alternative-links" id="alternative-links">
-            <h3>Альтернативные адреса:</h3>
-            <div class="link-card">
-                <a href="https://example.com/alternative1">https://example.com/alternative1</a>
-            </div>
-            <div class="link-card">
-                <a href="https://example.com/alternative2">https://example.com/alternative2</a>
-            </div>
-            <div class="link-card">
-                <a href="https://example.com/alternative3">https://example.com/alternative3</a>
-            </div>
-        </div>
-            </div>
         </div>
 </header>
   <main class="container">
