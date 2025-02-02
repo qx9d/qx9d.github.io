@@ -56,9 +56,9 @@ var clipboard = new ClipboardJS('#button-copy', {
 
 clipboard.on('success', function(e){
 	alert('Текст скопирован: ' + e.text);
-	e.trigger.classList.add('btn-success');
+	e.trigger.classList.add('copy-btn');
 	setTimeout(function(){
-		e.trigger.classList.remove('btn-success');
+		e.trigger.classList.remove('copy-btn');
 	}, 3000);
 });
 
