@@ -20,8 +20,6 @@
     <main class="container">
 <div class="plugin-card">
     <img src="tmdbp.png" alt="Плагин 1" class="plugin-image">
-                <div id="copied-success" class="copied">
-  <span>Скопирован</span>
 </div>
     <div class="plugin-info">
         <h2 class="plugin-title">TMDB Proxy</h2>
@@ -37,8 +35,10 @@
     <div class="plugin-info">
         <h2 class="plugin-title">Онлайн Мод</h2>
         <p class="plugin-description">Смотрите фильмы и сериалы онлайн. Доступно 7 балансеров</p>
-        <p class="plugin-description">https://ipdown.ru/mod.js</p>
-        <button class="copy-button" onclick="copyToClipboard('https://ipdown.ru/mod.js')">Скопировать ссылку</button>
+          <div class="clipboard">
+<input onclick="copy()" class="copy-input" value="https://ipdown.ru/mod.js" id="copyClipboard" readonly>
+<button class="copy-btn" id="copyButton" onclick="copy()"><i class="far fa-copy"></i></button>
+</div>
     </div>
 </div>
 
