@@ -32,20 +32,19 @@
             font-size: 14px; /* Размер заголовка */
         }
         .toggle-button {
-            padding: 8px 12px;
+            padding: 3px 8px;
             background-color: #555;
             color: white;
             border: none;
             cursor: pointer;
             transition: background-color 0.3s;
-            margin-bottom: 10px; /* Отступ снизу для кнопки */
         }
         .toggle-button:hover {
             background-color: #777;
         }
         .hidden-content {
             display: none;
-            margin-top: 10px;
+            font-size: 17px;
         }
         .tag-list {
             display: flex; /* Используем flex для расположения тегов в линию */
@@ -72,7 +71,7 @@
         <div class="text">
             <h1>Плагины "Lampa"</h1>
             <span>Здесь вы найдете множество интересного и полезного.</span>
-            <button class="toggle-button" onclick="toggleContent()">Показать теги</button>
+            <button class="toggle-button" onclick="toggleContent()">#зеркало</button>
             <div class="hidden-content" id="hiddenContent">
                 <div class="tag-list">
                     <div class="tag">lampa.mx</div>
