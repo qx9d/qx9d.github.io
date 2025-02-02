@@ -8,31 +8,24 @@
     <script src="https://kit.fontawesome.com/d97b87339f.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
 <style>
-      header {
-            background-color: #212529; /* Темный фон */
+            header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
             color: white;
             padding: 20px;
-            display: flex; /* Используем flexbox для выравнивания */
-            align-items: center; /* Выравнивание по центру по вертикали */
         }
-
-        img.logo {
-            width: 80px; /* Ограничение размера логотипа */
+        .logo img {
+            max-width: 100px; /* Ограничение размера логотипа */
             height: auto;
-            margin-right: 15px; /* Отступ справа от логотипа */
         }
-
-        h1 {
+        .text {
+            text-align: left;
+        }
+        h1, h2 {
             margin: 0;
-            font-size: 2em; /* Уменьшенный размер заголовка */
         }
-
-        h2 {
-            margin: 5px 0;
-            font-size: 1.2em; /* Уменьшенный размер подзаголовка */
-            color: #b0b0b0; /* Светло-серый цвет для подзаголовка */
-        }
-
         .toggle-button {
             background-color: #28a745;
             color: white;
@@ -109,13 +102,15 @@
     </script>
 </head>
 <body>
- <header class="site-header">
-        <div class="header-content">
-            <div class="header-text">
-                <img class="logo" src="https://ipdown.ru/Theme/img/lampa_js.png" alt="Lampa Logo">
-                <h1>Расширения "Lampa"</h1>
-                <p>Здесь вы найдете множество интересного и полезного.</p>
-                 <button class="toggle-button" onclick="toggleLinks()">Показать альтернативные адреса</button>
+    <header>
+        <div class="text">
+            <h1>Плагины "Lampa"</h1>
+            <h2>Здесь вы найдете множество интересного и полезного.</h2>
+        </div>
+        <div class="logo">
+            <img src="https://ipdown.ru/Theme/img/lampa_js.png" alt="Логотип Lampa">
+        </div>
+        <button class="toggle-button" onclick="toggleLinks()">Показать альтернативные адреса</button>
         <div class="alternative-links" id="alternative-links">
             <h3>Альтернативные адреса:</h3>
             <div class="link-card">
