@@ -164,7 +164,6 @@
 });
  
 clipboard.on('success', function(e){
-	alert('Текст скопирован: ' + e.text);
 	e.trigger.classList.add('btn-success');
 	setTimeout(function(){
 		e.trigger.classList.remove('btn-success');
